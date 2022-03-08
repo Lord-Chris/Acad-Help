@@ -9,6 +9,8 @@ class AppTextField extends StatelessWidget {
   bool obscureText;
   final TextEditingController? controller;
   final String? Function(String?)? validator;
+  final void Function()? onTap;
+
   final TextInputType? keyboardType;
   final TextCapitalization textCapitalization;
   final Widget? suffix;
@@ -24,6 +26,7 @@ class AppTextField extends StatelessWidget {
     this.hint,
     this.controller,
     this.validator,
+    this.onTap,
     this.keyboardType,
     this.textCapitalization = TextCapitalization.none,
     this.suffix,
@@ -54,6 +57,7 @@ class AppTextField extends StatelessWidget {
       maxLines: maxLines,
       minLines: minLines,
       maxLength: maxLength,
+      onTap: onTap,
       onEditingComplete: () => FocusScope.of(context).nextFocus(),
       style: const TextStyle(
         color: AppColors.main,

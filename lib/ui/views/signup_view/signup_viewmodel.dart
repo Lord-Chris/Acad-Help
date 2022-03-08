@@ -1,16 +1,39 @@
-import 'package:acad_help/core/locator.dart';
-import 'package:acad_help/core/routes.dart';
-import 'package:acad_help/services/navigation_service/i_navigation_service.dart';
 import 'package:stacked/stacked.dart';
 
-class SignupViewmodel extends BaseViewModel {
+import '../../../core/_core.dart';
+import '../../../services/_services.dart';
+
+class SignupViewmodel extends BaseViewModel with ToastMixin {
   final _navigationService = locator<INavigationService>();
+  final _authenticationService = locator<IAuthenticationService>();
+  bool showPassword = false;
 
-  bool get showPassword => false;
-
-  void registerUser(String fullName, String email, String password) {}
+  Future<void> registerUser(
+      String fullName, String dob, String email, String password) async {
+    try {
+      setBusy(true);
+      final _userDetails = SignupModel(
+        name: fullName,
+        dob: dob,
+        email: email,
+        password: password,
+      );
+      await _authenticationService.signUp(_userDetails);
+      setBusy(false);
+      navigateToLogin();
+      showSuccessToast("Congrats! You have signed Up Successfully");
+    } on Failure catch (e) {
+      setBusy(false);
+      showFailureToast(e.toString());
+    }
+  }
 
   void navigateToLogin() {
     _navigationService.offNamed(Routes.loginRoute);
+  }
+
+  void toggleObscurity() {
+    showPassword = !showPassword;
+    notifyListeners();
   }
 }

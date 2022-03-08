@@ -82,11 +82,12 @@ class LoginView extends HookWidget {
                           style: kSubBodyStyle,
                         ),
                         TextSpan(
-                            text: "Sign Up",
-                            style: kSubBodyStyle.copyWith(
-                                fontWeight: FontWeight.bold),
-                            recognizer: TapGestureRecognizer()
-                              ..onTap = () => model.navigateToSignup()),
+                          text: "Sign Up",
+                          style: kSubBodyStyle.copyWith(
+                              fontWeight: FontWeight.bold),
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () => model.navigateToSignup(),
+                        ),
                       ],
                     ),
                   ),

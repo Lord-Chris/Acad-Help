@@ -1,21 +1,16 @@
-// import 'dart:async';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
-// import 'package:cloud_firestore/cloud_firestore.dart';
+import '../../core/_core.dart';
+import '../_services.dart';
 
-// class FirestoreService implements IFirestoreService {
-//   final _firestore = FirebaseFirestore.instance;
-//   final _authService = locator<IAuthenticationService>();
+class FirestoreService implements IFirestoreService {
+  final _auth = FirebaseAuth.instance;
+  final _firestore = FirebaseFirestore.instance;
 
-//   CollectionReference _getWeightColl() {
-//     return _userColl.doc(_authService.currentUser?.uid).collection("weights");
-//   }
-
-//   @override
-//   Future<void> addWeight(WeightInput input) async {
-//     await _getWeightColl()
-//         .doc("${input.dateTime.microsecondsSinceEpoch}")
-//         .set(input.toMap());
-//   }
+  CollectionReference _getWeightColl() {
+    return _userColl.doc(_auth.currentUser?.uid).collection("weights");
+  }
 
 //   @override
 //   Future<void> updateWeight(WeightInput input) async {
@@ -49,5 +44,5 @@
 //     );
 //   }
 
-//   CollectionReference get _userColl => _firestore.collection("users");
-// }
+  CollectionReference get _userColl => _firestore.collection("users");
+}

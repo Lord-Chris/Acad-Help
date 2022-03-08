@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
       title: AppStrings.appName,
       onGenerateRoute: Routes.generateRoute,
       navigatorKey: NavigationService.navigatorKey,
+      scaffoldMessengerKey: ToastMixin.scaffoldkey,
       theme: ThemeData(
         primarySwatch: AppColors.main,
       ),

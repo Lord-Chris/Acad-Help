@@ -8,7 +8,7 @@ Future<void> setUpLocator() async {
   locator.registerLazySingleton<INavigationService>(() => NavigationService());
   locator.registerLazySingleton<IKeyValueStorageService>(
       () => KeyValueStorageService());
-  // locator.registerLazySingleton<IFirestoreService>(() => FirestoreService());
+  locator.registerLazySingleton<IFirestoreService>(() => FirestoreService());
   locator.registerLazySingleton<IAuthenticationService>(
       () => AuthenticationService());
 }
