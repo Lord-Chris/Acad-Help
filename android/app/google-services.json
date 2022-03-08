@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "702600888728",
+    "project_id": "acad-help",
+    "storage_bucket": "acad-help.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:702600888728:android:473f1cdbff930bd803ebed",
+        "android_client_info": {
+          "package_name": "com.example.acad_help"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "702600888728-qcqpddh71jejoncrueju90g6bikksb9t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.acad_help",
+            "certificate_hash": "7738e6cd65ee9817ad0ac4f8efc4afba000f0bf5"
+          }
+        },
+        {
+          "client_id": "702600888728-t14crjir565v2mt68ci2n9vcub2k18ip.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqknt_6HdWGbMDPZ6pYzVQAo2_566E6Y4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "702600888728-t14crjir565v2mt68ci2n9vcub2k18ip.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
