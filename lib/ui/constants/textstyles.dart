@@ -19,14 +19,14 @@ const kAppbarStyle = TextStyle(
 );
 
 const kMainStyle = TextStyle(
-  fontSize: 30,
+  fontSize: 25,
   color: AppColors.textColor,
   fontStyle: FontStyle.normal,
   fontWeight: FontWeight.w600,
 );
 
 const kBodyStyle = TextStyle(
-  fontSize: 20,
+  fontSize: 18,
   color: AppColors.textColor,
   fontStyle: FontStyle.normal,
   fontWeight: FontWeight.normal,

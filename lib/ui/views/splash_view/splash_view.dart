@@ -22,10 +22,10 @@ class _SplashViewState extends State<SplashView>
   Future<void> checkUserStatus() async {
     await Future.delayed(const Duration(seconds: 1));
     final _goToSignUp =
-        _keyValStorageService.readBool(key: StorageKeys.goToSignup, def: true);
-    if (!_goToSignUp!) {
+        _keyValStorageService.readBool(key: AppKeys.goToSignup, def: true);
+    if (_goToSignUp!) {
       _navService.offNamed(Routes.signupRoute);
-      _keyValStorageService.saveBool(key: StorageKeys.goToSignup, value: false);
+      _keyValStorageService.saveBool(key: AppKeys.goToSignup, value: false);
       return;
     }
 

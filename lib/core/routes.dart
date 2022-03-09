@@ -1,7 +1,8 @@
-import 'package:acad_help/ui/views/signup_view/signup_view.dart';
 import 'package:flutter/material.dart';
 
+import '../ui/views/home_view/home_view.dart';
 import '../ui/views/login_view/login_view.dart';
+import '../ui/views/signup_view/signup_view.dart';
 import '../ui/views/splash_view/splash_view.dart';
 
 class Routes {
@@ -18,8 +19,8 @@ class Routes {
         return MaterialPageRoute(builder: (_) => const SignupView());
       case loginRoute:
         return MaterialPageRoute(builder: (_) => const LoginView());
-      // case homeRoute:
-      //   return MaterialPageRoute(builder: (_) => const HomeView());
+      case homeRoute:
+        return MaterialPageRoute(builder: (_) => const HomeView());
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(
