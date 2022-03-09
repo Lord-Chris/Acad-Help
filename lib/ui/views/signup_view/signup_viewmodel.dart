@@ -12,7 +12,7 @@ class SignupViewmodel extends BaseViewModel with ToastMixin {
       String fullName, String dob, String email, String password) async {
     try {
       setBusy(true);
-      final _userDetails = SignupModel(
+      final _userDetails = UserModel(
         name: fullName,
         dob: dob,
         email: email,

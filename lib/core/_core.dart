@@ -1,6 +1,6 @@
 export 'extensions/validation_extension.dart';
 export 'mixins/toast_mixin.dart';
-export 'models/signup_model.dart';
+export 'models/user_model.dart';
 export 'models/failure.dart';
 export 'models/film_info.dart';
 

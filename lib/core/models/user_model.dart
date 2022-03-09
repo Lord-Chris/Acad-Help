@@ -1,13 +1,13 @@
 import 'dart:convert';
 
-class SignupModel {
+class UserModel {
   final String? id;
   final String name;
   final String dob;
   final String email;
   final String password;
 
-  const SignupModel({
+  const UserModel({
     this.id,
     required this.name,
     required this.dob,
@@ -15,14 +15,14 @@ class SignupModel {
     required this.password,
   });
 
-  SignupModel copyWith({
+  UserModel copyWith({
     String? id,
     String? name,
     String? dob,
     String? email,
     String? password,
   }) {
-    return SignupModel(
+    return UserModel(
       id: id ?? this.id,
       name: name ?? this.name,
       dob: dob ?? this.dob,
@@ -41,8 +41,8 @@ class SignupModel {
     };
   }
 
-  factory SignupModel.fromMap(Map<String, dynamic> map) {
-    return SignupModel(
+  factory UserModel.fromMap(Map<String, dynamic> map) {
+    return UserModel(
       id: map['id'],
       name: map['name'] ?? '',
       dob: map['dob'] ?? '',
@@ -53,5 +53,5 @@ class SignupModel {
 
   String toJson() => json.encode(toMap());
 
-  factory SignupModel.fromJson(String source) => SignupModel.fromMap(json.decode(source));
+  factory UserModel.fromJson(String source) => UserModel.fromMap(json.decode(source));
 }
